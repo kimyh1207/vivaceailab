@@ -99,6 +99,8 @@ HEAD → feature → [커밋 E]
 
 `git log` 결과에서 `(HEAD -> main)` 이라고 보이는 것, 이제 정확히 읽힙니다. "HEAD가 main을 가리키고 있고, main은 이 커밋을 가리킨다"는 뜻입니다.
 
+---
+
 ### Detached HEAD 상태
 
 가끔 `HEAD detached at a3f2c1d` 라는 메시지를 만납니다. 당황하지 않아도 됩니다.

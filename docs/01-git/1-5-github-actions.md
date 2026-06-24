@@ -44,13 +44,14 @@ GitHub Actions는 GitHub에 내장된 자동화 도구입니다. 저장소에 `.
 **Runner** — Job이 실행되는 서버입니다. GitHub이 Ubuntu, Windows, macOS 서버를 무료로 제공합니다.
 
 ```
-Workflow
-└── Event (push, PR, schedule ...)
-    └── Job (build, test, deploy ...)
-        ├── Step 1: 코드 체크아웃
-        ├── Step 2: Java 설치
-        ├── Step 3: 빌드
-        └── Step 4: 테스트
+Workflow (.github/workflows/ci.yml)
+├── on: Event        push, pull_request, schedule ...
+└── jobs:
+    └── build-and-test
+        ├── Step 1: 코드 체크아웃   (actions/checkout)
+        ├── Step 2: Java 설치       (actions/setup-java)
+        ├── Step 3: 빌드            (./gradlew build)
+        └── Step 4: 결과 업로드     (actions/upload-artifact)
 ```
 
 ---
